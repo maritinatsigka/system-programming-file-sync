@@ -48,7 +48,7 @@ The system is composed of the following components:
 ---
 
 ## ▶️ Run Instructions
-1. **Start the Manager*
+1. **Start the Manager**
    ```bash
    ./bin/fss_manager -l manager_log.txt -c config.txt -n 5
    ```
