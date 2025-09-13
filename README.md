@@ -71,3 +71,19 @@ The system is composed of the following components:
    - listStopped
    - purge
 ---
+
+## 📄 Notes
+
+- The configuration file (`config.txt`) defines sync pairs in the format:  
+  `<source_directory> <target_directory>`  
+  Example:
+  ```bash
+   /home/user/docs /backup/docs
+   /home/user/photos /backup/photos
+   ```
+- The `fss_manager` log entries follow the format:  
+`[TIMESTAMP] [SOURCE] [TARGET] [PID] [OPERATION] [RESULT] [DETAILS]`  
+Example:
+```bash
+   2025-03-12 14:05:32 /home/user/docs /backup/docs 12345 FULL SUCCESS 15 files copied
+   ```
