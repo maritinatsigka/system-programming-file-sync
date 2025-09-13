@@ -48,18 +48,24 @@ The system is composed of the following components:
 ---
 
 ## ▶️ Run Instructions
-1. **Start the Manager**: ./bin/fss_manager -l manager_log.txt -c config.txt -n 5
+1. **Start the Manager*
+   ```bash
+   ./bin/fss_manager -l manager_log.txt -c config.txt -n 5
+   ```
    - -l → manager log file
    - -c → configuration file with sync pairs (<source_dir> <target_dir>)
    - -n → maximum number of concurrent workers
-2. **Start the Console**: ./bin/fss_console -l console_log.txt
-3. **Available Console Commands**:
+3. **Start the Console**
+   ```bash
+   ./bin/fss_console -l console_log.txt
+   ```
+5. **Available Console Commands**
    - add <source> <target> → start monitoring and synchronizing a new directory pair
    - cancel <source> → stop monitoring a directory
    - status <source> → get synchronization status for a directory
    - sync <source> → trigger manual synchronization
    - shutdown → gracefully stop the manager and all workers
-4. **Use the Helper Script**: bash fss_script.sh -p <logfile_or_directory> -c <command>
+6. **Use the Helper Script**: bash fss_script.sh -p <logfile_or_directory> -c <command>
    - listAll
    - listMonitored
    - listStopped
