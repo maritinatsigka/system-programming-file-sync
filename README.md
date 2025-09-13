@@ -90,3 +90,13 @@ Example:
 ```bash
    2025-03-12 14:05:32 /home/user/docs /backup/docs 12345 FULL SUCCESS 15 files copied
    ```
+
+---
+
+## ⚠️ Assumptions & Limitations
+
+- Only **flat directories** are supported (no subdirectories).  
+- Each **source directory** maps to exactly one **target directory**.  
+- Overwrites happen without timestamp checking (latest file always replaces target).  
+- Named pipes are opened in **non-blocking mode** to avoid deadlocks.  
+- Errors are logged using `strerror(errno)` for debugging.
