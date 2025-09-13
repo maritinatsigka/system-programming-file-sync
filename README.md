@@ -65,7 +65,10 @@ The system is composed of the following components:
    - status <source> → get synchronization status for a directory
    - sync <source> → trigger manual synchronization
    - shutdown → gracefully stop the manager and all workers
-6. **Use the Helper Script**: bash fss_script.sh -p <logfile_or_directory> -c <command>
+6. **Use the Helper Script**
+   ```bash
+   bash fss_script.sh -p <logfile_or_directory> -c <command>
+   ```
    - listAll
    - listMonitored
    - listStopped
